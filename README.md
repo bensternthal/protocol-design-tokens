@@ -1,4 +1,6 @@
-# Photon Design Tokens
+# Protocol Design Tokens (WIP)
+
+****This repository was forked from https://github.com/FirefoxUX/design-tokens****
 
 A design token is an abstraction of a visual property such as color, font, width, animation, etc. These raw values are language application agnostic and once transformed and formatted can be used on any platform.
 
@@ -22,18 +24,14 @@ And this is its conversion into a CSS variable:
 }
 ```
 
-## Themes
-
-Combine multiple tokens to customize frameworks and other dimensions. For Photon themes, see [https://github.com/firefoxux/photon-themes](https://github.com/firefoxux/photon-themes).
-
 ## Contribute
 
 Setup the environment with [git](https://git-scm.com/) and [node](https://nodejs.org/en/) already installed. Then:
 
 ```
-$ git clone https://github.com/firefoxux/design-tokens/
+$ git clone https://github.com/mozilla/protocol-design-tokens/
 $ cd /path/to/folder
 $ npm install
 ```
 
-You can either [submit an issue](https://github.com/firefoxux/design-tokens/issues/new) or submit a pull request of changed code yourself.
+You can either [submit an issue](https://github.com/mozilla/protocol-design-tokens/issues/new) or submit a pull request of changed code yourself.

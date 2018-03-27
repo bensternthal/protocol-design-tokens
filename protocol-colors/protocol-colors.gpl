@@ -1,11 +1,11 @@
 GIMP Palette
-Name: Photon Colors
+Name: Protocol Colors
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-# Photon Colors GPL Color Palette v3.0.1
-# https://github.com/FirefoxUX/design-tokens/tree/master/photon-colors#readme
+# Protocol Colors GPL Color Palette v3.0.1
+# https://github.com/mozilla/protocol-design-tokens/tree/master/protocol-colors#readme
 
 255 26 217 Magenta 50
 237 0 181 Magenta 60
