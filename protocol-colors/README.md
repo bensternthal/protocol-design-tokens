@@ -1,6 +1,6 @@
 # Protocol Colors
 
-The standard set of colours for projects that want to harmonize with Firefox’s new Protocol design language.
+The standard set of colors for projects that want to harmonize with Mozilla’s new Protocol design language.
 
 ## Use
 
@@ -114,6 +114,3 @@ $ npm install
 
 1. Edit `./build.js`
 2. In the terminal, run `npm run build`
-
-
-

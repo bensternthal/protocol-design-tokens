@@ -1,7 +1,7 @@
 {
   "name": "protocol-colors",
   "version": "3.0.1",
-  "description": "Color variables for Firefox and related properties.",
+  "description": "Color variables for Mozilla and related properties.",
   "main": "protocol-colors.js",
   "style": "protocol-colors.scss",
   "scripts": {
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/mozilla/protocol-design-tokens.git"
   },
   "keywords": [
-    "firefox",
+    "mozilla",
     "colors",
     "css",
     "json"
