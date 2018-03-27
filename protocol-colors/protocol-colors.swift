@@ -2,11 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* Photon Colors iOS Variables v3.0.1
-   From https://github.com/FirefoxUX/design-tokens/tree/master/photon-colors#readme */
+/* Protocol Colors iOS Variables v3.0.1
+   From https://github.com/mozilla/protocol-design-tokens/tree/master/protocol-colors#readme */
 
 extension UIColor {
-    struct Photon {
+    struct Protocol {
         static let Magenta50 = UIColor(rgb: 0xff1ad9)
         static let Magenta60 = UIColor(rgb: 0xed00b5)
         static let Magenta70 = UIColor(rgb: 0xb5007f)

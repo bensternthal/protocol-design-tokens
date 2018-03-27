@@ -1,0 +1,26 @@
+{
+  "name": "protocol-colors",
+  "version": "3.0.1",
+  "description": "Color variables for Firefox and related properties.",
+  "main": "protocol-colors.js",
+  "style": "protocol-colors.scss",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/protocol-design-tokens.git"
+  },
+  "keywords": [
+    "firefox",
+    "colors",
+    "css",
+    "json"
+  ],
+  "author": "Blake Winton <bwinton@latte.ca>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/protocol-design-tokens/issues?q=is%3Aissue+is%3Aopen+label%3A%22tokens%3A+colors%22"
+  },
+  "homepage": "https://github.com/mozilla/protocol-design-tokens/tree/master/protocol-colors#readme"
+}
