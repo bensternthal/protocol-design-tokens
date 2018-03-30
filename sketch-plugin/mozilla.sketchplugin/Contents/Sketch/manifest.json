@@ -1,0 +1,35 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Mozilla Protocol",
+      "identifier": "palette-protocol",
+      "script": "mozilla.js"
+    },
+    {
+      "name": "Firefox Photon",
+      "identifier": "palette-photon",
+      "script": "photon.js"
+    }
+  ],
+  "menu": {
+    "title": "Mozilla",
+    "items": [
+      {
+        "title": "Palettes",
+        "items": [
+          "palette-protocol",
+          "palette-photon"
+        ]
+      }
+    ]
+  },
+  "version": "0.1.0",
+  "name": "Mozilla",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Michael McCombie",
+  "authorEmail": "mmccombie@mozilla.com"
+}

@@ -4,79 +4,37 @@
 
 /* Protocol Colors JS Variables v3.0.1 */
 
-exports.MAGENTA_50 = '#ff1ad9';
-exports.MAGENTA_60 = '#ed00b5';
-exports.MAGENTA_70 = '#b5007f';
-exports.MAGENTA_80 = '#7d004f';
-exports.MAGENTA_90 = '#440027';
+exports.BLACK = '#000000';
+exports.PRIMARY = '#000000';
 
-exports.PURPLE_50 = '#9400ff';
-exports.PURPLE_60 = '#8000d7';
-exports.PURPLE_70 = '#6200a4';
-exports.PURPLE_80 = '#440071';
-exports.PURPLE_90 = '#25003e';
+exports.WHITE = '#ffffff';
+exports.SECONDARY = '#ffffff';
 
-exports.BLUE_40 = '#45a1ff';
-exports.BLUE_50 = '#0a84ff';
-exports.BLUE_50_A30 = '#0a84ff4c';
-exports.BLUE_60 = '#0060df';
-exports.BLUE_70 = '#003eaa';
-exports.BLUE_80 = '#002275';
-exports.BLUE_90 = '#000f40';
+exports.CYAN_LIGHT = '#00ffff';
+exports.CYAN = '#00e5e5';
+exports.CYAN_DARK = '#00cccc';
 
-exports.TEAL_50 = '#00feff';
-exports.TEAL_60 = '#00c8d7';
-exports.TEAL_70 = '#008ea4';
-exports.TEAL_80 = '#005a71';
-exports.TEAL_90 = '#002d3e';
+exports.YELLOW_LIGHT = '#fff63a';
+exports.YELLOW = '#e5dc34';
+exports.YELLOW_DARK = '#ccc42e';
 
-exports.GREEN_50 = '#30e60b';
-exports.GREEN_60 = '#12bc00';
-exports.GREEN_70 = '#058b00';
-exports.GREEN_80 = '#006504';
-exports.GREEN_90 = '#003706';
+exports.RED_LIGHT = '#ff4d4e';
+exports.RED = '#e54546';
+exports.RED_DARK = '#cc3d3e';
 
-exports.YELLOW_50 = '#ffe900';
-exports.YELLOW_60 = '#d7b600';
-exports.YELLOW_70 = '#a47f00';
-exports.YELLOW_80 = '#715100';
-exports.YELLOW_90 = '#3e2800';
+exports.GREEN_LIGHT = '#49ffbb';
+exports.GREEN = '#41e5a7';
+exports.GREEN_DARK = '#3acc95';
 
-exports.RED_50 = '#ff0039';
-exports.RED_60 = '#d70022';
-exports.RED_70 = '#a4000f';
-exports.RED_80 = '#5a0002';
-exports.RED_90 = '#3e0200';
+exports.TEAL_LIGHT = '#00a7a7';
+exports.TEAL = '#009696';
+exports.TEAL_DARK = '#008484';
 
-exports.ORANGE_50 = '#ff9400';
-exports.ORANGE_60 = '#d76e00';
-exports.ORANGE_70 = '#a44900';
-exports.ORANGE_80 = '#712b00';
-exports.ORANGE_90 = '#3e1300';
+exports.PURPLE_LIGHT = '#cf2cfa';
+exports.PURPLE = '#ba27e1';
+exports.PURPLE_DARK = '#a423c7';
 
-exports.GREY_10 = '#f9f9fa';
-exports.GREY_20 = '#ededf0';
-exports.GREY_30 = '#d7d7db';
-exports.GREY_40 = '#b1b1b3';
-exports.GREY_50 = '#737373';
-exports.GREY_60 = '#4a4a4f';
-exports.GREY_70 = '#38383d';
-exports.GREY_80 = '#2a2a2e';
-exports.GREY_90 = '#0c0c0d';
-exports.GREY_90_A05 = '#0c0c0d0c';
-exports.GREY_90_A10 = '#0c0c0d19';
-exports.GREY_90_A20 = '#0c0c0d33';
-exports.GREY_90_A30 = '#0c0c0d4c';
-exports.GREY_90_A40 = '#0c0c0d66';
-exports.GREY_90_A50 = '#0c0c0d7f';
-exports.GREY_90_A60 = '#0c0c0d99';
-exports.GREY_90_A70 = '#0c0c0db2';
-exports.GREY_90_A80 = '#0c0c0dcc';
-exports.GREY_90_A90 = '#0c0c0de5';
-
-exports.INK_70 = '#363959';
-exports.INK_80 = '#202340';
-exports.INK_90 = '#0f1126';
-
-exports.WHITE_100 = '#ffffff';
+exports.BLUE_LIGHT = '#00a7e0';
+exports.BLUE = '#0096ca';
+exports.BLUE_DARK = '#0084b2';
 

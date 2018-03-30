@@ -1,0 +1,29 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Mozilla Protocol",
+      "identifier": "palette-protocol",
+      "script": "./palettes/mozilla.js"
+    },
+    {
+      "name": "Firefox Photon",
+      "identifier": "palette-photon",
+      "script": "./palettes/photon.js"
+    }
+  ],
+  "menu": {
+    "title": "Mozilla",
+    "items": [
+      {
+        "title": "Palettes",
+        "items": [
+          "palette-protocol","palette-photon"
+        ]
+      }
+    ]
+  }
+
+}
