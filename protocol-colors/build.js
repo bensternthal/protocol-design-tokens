@@ -1,5 +1,5 @@
 const fs = require('fs');
-const colors = require('./protocol-colors.json');
+const colors = require('./colors/protocol-colors.json');
 const metadata = require('./package.json');
 const colorArray = [];
 
@@ -343,7 +343,7 @@ for (let key in formats) {
   if (!out_func) {
     out_func = (data) => data.join('');
   }
-  fs.writeFile(`protocol-colors.${format.ext}`, out_func(format.output), 'utf8', (err) => {
+  fs.writeFile(`colors/protocol-colors.${format.ext}`, out_func(format.output), 'utf8', (err) => {
     if (err) throw err;
   });
 }

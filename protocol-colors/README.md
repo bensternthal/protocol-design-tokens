@@ -16,7 +16,7 @@ $ npm install
 
 ### Add or change color
 
-1. Edit `./protocol-colors.json`
+1. Edit `./colors/protocol-colors.json`
 2. In the terminal, run `npm run build`
 
 ### Add file type
