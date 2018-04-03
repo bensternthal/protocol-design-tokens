@@ -4,7 +4,7 @@ Name: Protocol Colors
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-# Protocol Colors GPL Color Palette v1.0.0
+# Protocol Colors GPL Color Palette v1.1.0
 # https://github.com/mozilla/protocol-design-tokens/tree/master/protocol-colors#readme
 
 0 0 0 Black
@@ -13,31 +13,35 @@ Name: Protocol Colors
 255 255 255 White
 255 255 255 Secondary
 
-0 255 255 Cyan Light
-0 229 229 Cyan
-0 204 204 Cyan Dark
+162 255 255 Cyan Light
+0 255 255 Cyan
+0 229 229 Cyan Dark
 
-255 246 58 Yellow Light
-229 220 52 Yellow
-204 196 46 Yellow Dark
+255 249 163 Yellow Light
+255 244 79 Yellow
+247 232 0 Yellow Dark
 
-255 77 78 Red Light
-229 69 70 Red
-204 61 62 Red Dark
+254 124 135 Red Light
+255 79 94 Red
+229 60 74 Red Dark
 
-73 255 187 Green Light
-65 229 167 Green
-58 204 149 Green Dark
+173 255 223 Green Light
+84 255 189 Green
+44 230 158 Green Dark
 
-0 167 167 Teal Light
-0 150 150 Teal
-0 132 132 Teal Dark
+37 188 188 Teal Light
+15 143 143 Teal
+0 94 94 Teal Dark
 
-207 44 250 Purple Light
-186 39 225 Purple
-164 35 199 Purple Dark
+159 84 178 Purple Light
+110 0 139 Purple
+79 1 100 Purple Dark
 
-0 167 224 Blue Light
-0 150 202 Blue
-0 132 178 Blue Dark
+83 158 233 Blue Light
+35 116 198 Blue
+0 69 139 Blue Dark
+
+231 231 231 Gray Light
+200 200 200 Gray
+149 149 149 Gray Dark
 
