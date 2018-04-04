@@ -23,3 +23,9 @@ $ npm install
 
 1. Edit `./build.js`
 2. In the terminal, run `npm run build`
+
+### Versioning
+
++ 1.0.0 for releases that require refactoring
++ 0.1.0 for releases that replace colors
++ 0.0.1 for releases that add colors

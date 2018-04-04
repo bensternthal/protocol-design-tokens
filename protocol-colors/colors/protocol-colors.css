@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* Protocol Colors CSS Variables v1.1.0 */
+/* Protocol Colors CSS Variables v1.1.1 */
 
 :root {
   --black: #000000;
@@ -36,8 +36,11 @@
   --purple-dark: #4f0164;
 
   --blue-light: #539ee9;
+  --link-hover-light: #539ee9;
   --blue: #2374c6;
+  --link: #2374c6;
   --blue-dark: #00458b;
+  --link-active-dark: #00458b;
 
   --gray-light: #e7e7e7;
   --gray: #c8c8c8;

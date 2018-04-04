@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* Protocol Colors JS Variables v1.1.0 */
+/* Protocol Colors JS Variables v1.1.1 */
 
 exports.BLACK = '#000000';
 exports.PRIMARY = '#000000';
@@ -35,8 +35,11 @@ exports.PURPLE = '#6e008b';
 exports.PURPLE_DARK = '#4f0164';
 
 exports.BLUE_LIGHT = '#539ee9';
+exports.LINK-HOVER = '#539ee9';
 exports.BLUE = '#2374c6';
+exports.LINK = '#2374c6';
 exports.BLUE_DARK = '#00458b';
+exports.LINK-ACTIVE = '#00458b';
 
 exports.GRAY_LIGHT = '#e7e7e7';
 exports.GRAY = '#c8c8c8';

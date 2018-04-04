@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* Protocol Colors iOS Variables v1.1.0
+/* Protocol Colors iOS Variables v1.1.1
    From https://github.com/mozilla/protocol-design-tokens/tree/master/protocol-colors#readme */
 
 extension UIColor {
@@ -38,8 +38,11 @@ extension UIColor {
         static let Purpledark = UIColor(rgb: 0x4f0164)
 
         static let Bluelight = UIColor(rgb: 0x539ee9)
+        static let Link-hover = UIColor(rgb: 0x539ee9)
         static let Blue = UIColor(rgb: 0x2374c6)
+        static let Link = UIColor(rgb: 0x2374c6)
         static let Bluedark = UIColor(rgb: 0x00458b)
+        static let Link-active = UIColor(rgb: 0x00458b)
 
         static let Graylight = UIColor(rgb: 0xe7e7e7)
         static let Gray = UIColor(rgb: 0xc8c8c8)

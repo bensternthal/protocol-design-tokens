@@ -9,7 +9,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:svg="http://www.w3.org/2000/svg"
   xmlns:ooo="http://openoffice.org/2004/office">
-<!-- Protocol Color Palette v1.1.0 -->
+<!-- Protocol Color Palette v1.1.1 -->
 
   <draw:color draw:name="black" draw:color="#000000" />
   <draw:color draw:name="primary" draw:color="#000000" />
@@ -42,8 +42,11 @@
   <draw:color draw:name="purple-dark" draw:color="#4f0164" />
 
   <draw:color draw:name="blue-light" draw:color="#539ee9" />
+  <draw:color draw:name="link-hover" draw:color="#539ee9" />
   <draw:color draw:name="blue" draw:color="#2374c6" />
+  <draw:color draw:name="link" draw:color="#2374c6" />
   <draw:color draw:name="blue-dark" draw:color="#00458b" />
+  <draw:color draw:name="link-active" draw:color="#00458b" />
 
   <draw:color draw:name="gray-light" draw:color="#e7e7e7" />
   <draw:color draw:name="gray" draw:color="#c8c8c8" />

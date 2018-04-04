@@ -5,7 +5,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <resources>
-    <!-- Protocol Color Palette v1.1.0 -->
+    <!-- Protocol Color Palette v1.1.1 -->
     <color name="black">#000000</color>
     <color name="primary">#000000</color>
 
@@ -37,8 +37,11 @@
     <color name="purple_dark">#4f0164</color>
 
     <color name="blue_light">#539ee9</color>
+    <color name="link-hover">#539ee9</color>
     <color name="blue">#2374c6</color>
+    <color name="link">#2374c6</color>
     <color name="blue_dark">#00458b</color>
+    <color name="link-active">#00458b</color>
 
     <color name="gray_light">#e7e7e7</color>
     <color name="gray">#c8c8c8</color>

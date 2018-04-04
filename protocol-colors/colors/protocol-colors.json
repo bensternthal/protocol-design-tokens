@@ -42,9 +42,18 @@
     "dark":   {"hex": "#4f0164"}
   },
   "blue": {
-    "light":  {"hex": "#539ee9"},
-    "default": {"hex": "#2374c6"},
-    "dark":   {"hex": "#00458b"}
+    "light":  {
+      "hex": "#539ee9",
+      "map": "link-hover"
+    },
+    "default": {
+      "hex": "#2374c6",
+      "map": "link"
+    },
+    "dark":   {
+      "hex": "#00458b",
+      "map": "link-active"
+    }
   },
   "gray": {
     "light":  {"hex": "#e7e7e7"},
