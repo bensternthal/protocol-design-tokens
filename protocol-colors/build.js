@@ -313,10 +313,12 @@ const formats = {
           } else {
             return `$color-${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n$color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           }
-        } else if (alpha == '100') {
-            return `$color-${color}-${variant}: ${value};\n$color-${alias}: ${value};\n`;
         } else {
-          return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n$color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          if (alpha == '100') {
+              return `$color-${color}-${variant}: ${value};\n$color-${alias}: ${value};\n`;
+          } else {
+            return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n$color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          }
         }
       } else {
         if (variant == 'default') {
@@ -325,10 +327,12 @@ const formats = {
           } else {
             return `$color-${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           }
-        } else if (alpha == '100') {
-            return `$color-${color}-${variant}: ${value};\n`;
         } else {
-          return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          if (alpha == '100') {
+              return `$color-${color}-${variant}: ${value};\n`;
+          } else {
+            return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          }
         }
       }
     },
