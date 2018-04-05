@@ -1,5 +1,6 @@
 const fs = require('fs');
 const colors = require('./colors/protocol-colors.json');
+const gradients = require('./gradients/protocol-gradients.json');
 const metadata = require('./package.json');
 const colorArray = [];
 
@@ -27,7 +28,6 @@ function toHex(value) {
   return ('0' + Math.floor(value / 100 * 255).toString(16).split('.')[0]).substr(-2);
 }
 
-// Colors
 function createColor(color, element, format) {
   const rv = [];
 
@@ -54,6 +54,8 @@ function createColor(color, element, format) {
 }
 
 const formats = {
+
+  // Colors
   'android': {
     'folder': 'colors',
     'output': [`<?xml version="1.0" encoding="utf-8"?>\n\n${xmlLicense}\n<resources>\n    <!-- Protocol Color Palette v${metadata.version} -->\n`],
@@ -352,7 +354,7 @@ for (let key in formats) {
   if (!out_func) {
     out_func = (data) => data.join('');
   }
-  fs.writeFile(`${format.folder}/protocol-colors.${format.ext}`, out_func(format.output), 'utf8', (err) => {
+  fs.writeFile(`${format.folder}/protocol-${format.folder}.${format.ext}`, out_func(format.output), 'utf8', (err) => {
     if (err) throw err;
   });
 }

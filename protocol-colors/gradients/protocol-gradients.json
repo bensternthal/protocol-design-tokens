@@ -1,20 +1,20 @@
 {
-  "name": "greyscale",
-  "type": "radial",
-  "angle": 90,
-  "colors": [
-    "#000000",
-    "#FFFFFF"
-  ]
-},
-{
-  "name": "focus",
-  "type": "linear",
-  "angle": 45,
-  "colors": [
-    "#4A1475",
-    "#671878",
-    "#C42482",
-    "#FF271D"
-  ]
+  "grayscale": {
+    "type": "radial",
+    "angle": 90,
+    "colors": [
+      "#000000",
+      "#FFFFFF"
+    ]
+  },
+  "focus": {
+    "type": "linear",
+    "angle": 45,
+    "colors": [
+      "#4A1475",
+      "#671878",
+      "#C42482",
+      "#FF271D"
+    ]
+  }
 }
