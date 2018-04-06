@@ -1,7 +1,7 @@
 {
   "name": "protocol-colors",
   "version": "2.0.0",
-  "description": "Color variables for Mozilla and related properties.",
+  "description": "Variables for Mozilla's brand and interface color palette",
   "main": "protocol-colors.js",
   "style": "protocol-colors.scss",
   "scripts": {
