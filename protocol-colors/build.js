@@ -386,6 +386,14 @@ function createGradients(gradient, format) {
 }
 
 const formatsGradients = {
+    'css': {
+      'output': [`${jsLicense}\n/* Protocol Colors CSS Variables v${metadata.version} */\n\n:root {\n`],
+      'formatter': (gradient, direction, degrees, values) => {
+        return `  --gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values});\n`
+      },
+      'footer': '}\n',
+      'ext': 'css'
+    },
     'js': {
       'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
       'formatter': (gradient, direction, degrees, values) => {
@@ -396,14 +404,14 @@ const formatsGradients = {
     'less': {
       'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
       'formatter': (gradient, direction, degrees, values) => {
-        return `@gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values})\n`
+        return `@gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values});\n`
       },
       'ext': 'less'
     },
     'sass': {
       'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
       'formatter': (gradient, direction, degrees, values) => {
-        return `$gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values})\n`
+        return `$gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values});\n`
       },
       'ext': 'scss'
     }
