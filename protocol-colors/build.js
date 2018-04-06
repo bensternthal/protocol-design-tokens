@@ -370,11 +370,11 @@ function createGradients(gradient, format) {
       var degrees = `${gradients[gradient].angle}`
       // 45
     } else if (type === 'colors') {
-      var hexes = `${gradients[gradient].colors}`
+      var values = `${gradients[gradient].colors}`
       // #4A1475,#671878,#C42482,#FF271D
     }
   }
-  rv.push(format.formatter(gradient, direction, degrees, hexes));
+  rv.push(format.formatter(gradient, direction, degrees, values));
 
   if (format.group_end === undefined) {
     format.group_end = '\n';
@@ -388,15 +388,15 @@ function createGradients(gradient, format) {
 const formatsGradients = {
     'less': {
       'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
-      'formatter': (gradient, direction, degrees, hexes) => {
-        return `@gradient-${gradient}: ${direction}-gradient(${degrees}deg, ${hexes})\n`
+      'formatter': (gradient, direction, degrees, values) => {
+        return `@gradient-${gradient}: ${direction}-gradient(${degrees}deg, ${values})\n`
       },
       'ext': 'less'
     },
     'sass': {
       'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
-      'formatter': (gradient, direction, degrees, hexes) => {
-        return `$gradient-${gradient}: ${direction}-gradient(${degrees}deg, ${hexes})\n`
+      'formatter': (gradient, direction, degrees, values) => {
+        return `$gradient-${gradient}: ${direction}-gradient(${degrees}deg, ${values})\n`
       },
       'ext': 'scss'
     }
