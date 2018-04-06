@@ -1,5 +1,6 @@
 const fs = require('fs');
 const colors = require('./colors/protocol-colors.json');
+const gradients = require('./gradients/protocol-gradients.json');
 const metadata = require('./package.json');
 const colorArray = [];
 
@@ -26,6 +27,9 @@ function getRgb(value) {
 function toHex(value) {
   return ('0' + Math.floor(value / 100 * 255).toString(16).split('.')[0]).substr(-2);
 }
+
+
+// Colors
 
 function createColor(color, element, format) {
   const rv = [];
@@ -302,10 +306,12 @@ const formats = {
           } else {
             return `$color-${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n$color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           }
-        } else if (alpha == '100') {
-            return `$color-${color}-${variant}: ${value};\n$color-${alias}: ${value};\n`;
         } else {
-          return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n$color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          if (alpha == '100') {
+              return `$color-${color}-${variant}: ${value};\n$color-${alias}: ${value};\n`;
+          } else {
+            return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n$color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          }
         }
       } else {
         if (variant == 'default') {
@@ -314,10 +320,12 @@ const formats = {
           } else {
             return `$color-${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           }
-        } else if (alpha == '100') {
-            return `$color-${color}-${variant}: ${value};\n`;
         } else {
-          return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          if (alpha == '100') {
+              return `$color-${color}-${variant}: ${value};\n`;
+          } else {
+            return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
+          }
         }
       }
     },
@@ -344,6 +352,90 @@ for (let key in formats) {
     out_func = (data) => data.join('');
   }
   fs.writeFile(`colors/protocol-colors.${format.ext}`, out_func(format.output), 'utf8', (err) => {
+    if (err) throw err;
+  });
+}
+
+
+// Gradients
+
+function createGradients(gradient, format) {
+  const rv = [];
+
+  for (const type in gradients[gradient]) {
+    if (type === 'type') {
+      var direction = `${gradients[gradient].type}`
+      // Linear !!!
+    } else if (type === 'angle') {
+      var degrees = `${gradients[gradient].angle}`
+      // 45
+    } else if (type === 'colors') {
+      var values = `${gradients[gradient].colors}`
+      // #4A1475,#671878,#C42482,#FF271D
+    }
+  }
+  rv.push(format.formatter(gradient, direction, degrees, values));
+
+  if (format.group_end === undefined) {
+    format.group_end = '\n';
+  }
+  if (format.group_end) {
+    rv.push(format.group_end);
+  }
+  return rv;
+}
+
+const formatsGradients = {
+    'css': {
+      'output': [`${jsLicense}\n/* Protocol Colors CSS Variables v${metadata.version} */\n\n:root {\n`],
+      'formatter': (gradient, direction, degrees, values) => {
+        return `  --gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values});\n`
+      },
+      'footer': '}\n',
+      'ext': 'css'
+    },
+    'js': {
+      'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
+      'formatter': (gradient, direction, degrees, values) => {
+        return `exports.${gradient.toUpperCase()} = '${direction}-gradient(${degrees}deg,${values})';\n`
+      },
+      'ext': 'js'
+    },
+    'less': {
+      'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
+      'formatter': (gradient, direction, degrees, values) => {
+        return `@gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values});\n`
+      },
+      'ext': 'less'
+    },
+    'sass': {
+      'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
+      'formatter': (gradient, direction, degrees, values) => {
+        return `$gradient-${gradient}: ${direction}-gradient(${degrees}deg,${values});\n`
+      },
+      'ext': 'scss'
+    }
+}
+
+for (const gradient in gradients) {
+  const element = gradients[gradient];
+  for (const key in formatsGradients) {
+    const format = formatsGradients[key];
+    format.output.push(...createGradients(gradient, format));
+  }
+}
+
+// output key/value formats to files
+for (let key in formatsGradients) {
+  const format = formatsGradients[key];
+  if (format.footer) {
+    format.output.push(format.footer);
+  }
+  let out_func = format.outputter;
+  if (!out_func) {
+    out_func = (data) => data.join('');
+  }
+  fs.writeFile(`gradients/protocol-gradients.${format.ext}`, out_func(format.output), 'utf8', (err) => {
     if (err) throw err;
   });
 }
