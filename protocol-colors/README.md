@@ -16,7 +16,7 @@ Install package with NPM and add it to your development dependencies:
 </tr>
 <tr>
 <td>Description</td>
-<td>Import Mozilla's brand and interface color palette</td>
+<td>Variables for Mozilla's brand and interface color palette</td>
 </tr>
 <tr>
 <td>Version</td>
