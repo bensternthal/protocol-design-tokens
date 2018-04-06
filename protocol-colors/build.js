@@ -28,6 +28,9 @@ function toHex(value) {
   return ('0' + Math.floor(value / 100 * 255).toString(16).split('.')[0]).substr(-2);
 }
 
+
+// Colors
+
 function createColor(color, element, format) {
   const rv = [];
 
@@ -54,10 +57,7 @@ function createColor(color, element, format) {
 }
 
 const formats = {
-
-  // Colors
   'android': {
-    'folder': 'colors',
     'output': [`<?xml version="1.0" encoding="utf-8"?>\n\n${xmlLicense}\n<resources>\n    <!-- Protocol Color Palette v${metadata.version} -->\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       if (alpha != '100') {
@@ -95,7 +95,6 @@ const formats = {
     'footer': '</resources>'
   },
   'css': {
-    'folder': 'colors',
     'output': [`${jsLicense}\n/* Protocol Colors CSS Variables v${metadata.version} */\n\n:root {\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       if(typeof alias !== "undefined") {
@@ -134,7 +133,6 @@ const formats = {
     'ext': 'css'
   },
   'gimp': {
-    'folder': 'colors',
     'output': [`GIMP Palette\nName: Protocol Colors\n${shLicense}\n# Protocol Colors GPL Color Palette v${metadata.version}\n# ${metadata.homepage}\n\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       if (alpha == '100') {
@@ -160,7 +158,6 @@ const formats = {
     'ext': 'gpl'
   },
   'ios': {
-    'folder': 'colors',
     'output': [`${jsLicense}\n/* Protocol Colors iOS Variables v${metadata.version}\n   From ${metadata.homepage} */\n\nextension UIColor {\n    struct Protocol {\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       color = color[0].toUpperCase() + color.substr(1);
@@ -202,7 +199,6 @@ const formats = {
     'footer': '  }\n}'
   },
   'js': {
-    'folder': 'colors',
     'output': [`${jsLicense}\n/* Protocol Colors JS Variables v${metadata.version} */\n\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       if (alpha != '100') {
@@ -239,7 +235,6 @@ const formats = {
     'ext': 'js'
   },
   'less': {
-    'folder': 'colors',
     'output': [`${jsLicense}\n/* Protocol Colors Less Variables v${metadata.version} */\n\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       if(typeof alias !== "undefined") {
@@ -277,7 +272,6 @@ const formats = {
     'ext': 'less'
   },
   'libreoffice': {
-    'folder': 'colors',
     'output': [`<?xml version="1.0" encoding="UTF-8"?>\n${xmlLicense}\n<ooo:color-table\n  xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"\n  xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"\n  xmlns:xlink="http://www.w3.org/1999/xlink"\n  xmlns:svg="http://www.w3.org/2000/svg"\n  xmlns:ooo="http://openoffice.org/2004/office">\n<!-- Protocol Color Palette v${metadata.version} -->\n\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       if(typeof alias !== "undefined") {
@@ -302,7 +296,6 @@ const formats = {
     'footer': '</ooo:color-table>'
   },
   'sass': {
-    'folder': 'colors',
     'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
     'formatter': (color, variant, value, alpha, alias) => {
       const {r,g,b} = getRgb(value);
@@ -358,7 +351,76 @@ for (let key in formats) {
   if (!out_func) {
     out_func = (data) => data.join('');
   }
-  fs.writeFile(`${format.folder}/protocol-${format.folder}.${format.ext}`, out_func(format.output), 'utf8', (err) => {
+  fs.writeFile(`colors/protocol-colors.${format.ext}`, out_func(format.output), 'utf8', (err) => {
+    if (err) throw err;
+  });
+}
+
+
+// Gradients
+
+function createGradients(gradient, format) {
+  const rv = [];
+
+  for (const type in gradients[gradient]) {
+    if (type === 'type') {
+      var direction = `${gradients[gradient].type}`
+      // Linear !!!
+    } else if (type === 'angle') {
+      var degrees = `${gradients[gradient].angle}`
+      // 45
+    } else if (type === 'colors') {
+      var hexes = `${gradients[gradient].colors}`
+      // #4A1475,#671878,#C42482,#FF271D
+    }
+  }
+  rv.push(format.formatter(gradient, direction, degrees, hexes));
+
+  if (format.group_end === undefined) {
+    format.group_end = '\n';
+  }
+  if (format.group_end) {
+    rv.push(format.group_end);
+  }
+  return rv;
+}
+
+const formatsGradients = {
+    'less': {
+      'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
+      'formatter': (gradient, direction, degrees, hexes) => {
+        return `@gradient-${gradient}: ${direction}-gradient(${degrees}deg, ${hexes})\n`
+      },
+      'ext': 'less'
+    },
+    'sass': {
+      'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
+      'formatter': (gradient, direction, degrees, hexes) => {
+        return `$gradient-${gradient}: ${direction}-gradient(${degrees}deg, ${hexes})\n`
+      },
+      'ext': 'scss'
+    }
+}
+
+for (const gradient in gradients) {
+  const element = gradients[gradient];
+  for (const key in formatsGradients) {
+    const format = formatsGradients[key];
+    format.output.push(...createGradients(gradient, format));
+  }
+}
+
+// output key/value formats to files
+for (let key in formatsGradients) {
+  const format = formatsGradients[key];
+  if (format.footer) {
+    format.output.push(format.footer);
+  }
+  let out_func = format.outputter;
+  if (!out_func) {
+    out_func = (data) => data.join('');
+  }
+  fs.writeFile(`gradients/protocol-gradients.${format.ext}`, out_func(format.output), 'utf8', (err) => {
     if (err) throw err;
   });
 }
