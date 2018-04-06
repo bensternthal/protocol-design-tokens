@@ -4,9 +4,9 @@
 
 /* Protocol Colors SCSS Variables v2.0.0 */
 
-$gradient-grayscale: radial-gradient(90deg,#000000,#FFFFFF)
+exports.GRAYSCALE = 'radial-gradient(90deg,#000000,#FFFFFF)';
 
-$gradient-focus: linear-gradient(45deg,#4A1475,#671878,#C42482,#FF271D)
+exports.FOCUS = 'linear-gradient(45deg,#4A1475,#671878,#C42482,#FF271D)';
 
-$gradient-helloworld: radial-gradient(4deg,#4A1475,#671878,#C42482)
+exports.HELLOWORLD = 'radial-gradient(4deg,#4A1475,#671878,#C42482)';
 
