@@ -5,39 +5,46 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <resources>
-    <!-- Protocol Color Palette v1.0.0 -->
+    <!-- Protocol Color Palette v2.0.0 -->
     <color name="black">#000000</color>
     <color name="primary">#000000</color>
 
     <color name="white">#ffffff</color>
     <color name="secondary">#ffffff</color>
 
-    <color name="cyan_light">#00ffff</color>
-    <color name="cyan">#00e5e5</color>
-    <color name="cyan_dark">#00cccc</color>
+    <color name="cyan_light">#a2ffff</color>
+    <color name="cyan">#00ffff</color>
+    <color name="cyan_dark">#00e5e5</color>
 
-    <color name="yellow_light">#fff63a</color>
-    <color name="yellow">#e5dc34</color>
-    <color name="yellow_dark">#ccc42e</color>
+    <color name="yellow_light">#fff9a3</color>
+    <color name="yellow">#fff44f</color>
+    <color name="yellow_dark">#f7e800</color>
 
-    <color name="red_light">#ff4d4e</color>
-    <color name="red">#e54546</color>
-    <color name="red_dark">#cc3d3e</color>
+    <color name="red_light">#fe7c87</color>
+    <color name="red">#ff4f5e</color>
+    <color name="red_dark">#e53c4a</color>
 
-    <color name="green_light">#49ffbb</color>
-    <color name="green">#41e5a7</color>
-    <color name="green_dark">#3acc95</color>
+    <color name="green_light">#adffdf</color>
+    <color name="green">#54ffbd</color>
+    <color name="green_dark">#2ce69e</color>
 
-    <color name="teal_light">#00a7a7</color>
-    <color name="teal">#009696</color>
-    <color name="teal_dark">#008484</color>
+    <color name="teal_light">#25bcbc</color>
+    <color name="teal">#0f8f8f</color>
+    <color name="teal_dark">#005e5e</color>
 
-    <color name="purple_light">#cf2cfa</color>
-    <color name="purple">#ba27e1</color>
-    <color name="purple_dark">#a423c7</color>
+    <color name="purple_light">#9f54b2</color>
+    <color name="purple">#6e008b</color>
+    <color name="purple_dark">#4f0164</color>
 
-    <color name="blue_light">#00a7e0</color>
-    <color name="blue">#0096ca</color>
-    <color name="blue_dark">#0084b2</color>
+    <color name="blue_light">#539ee9</color>
+    <color name="link-hover">#539ee9</color>
+    <color name="blue">#2374c6</color>
+    <color name="link">#2374c6</color>
+    <color name="blue_dark">#00458b</color>
+    <color name="link-active">#00458b</color>
+
+    <color name="gray_light">#e7e7e7</color>
+    <color name="gray">#c8c8c8</color>
+    <color name="gray_dark">#959595</color>
 
 </resources>

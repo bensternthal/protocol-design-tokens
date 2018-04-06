@@ -9,7 +9,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:svg="http://www.w3.org/2000/svg"
   xmlns:ooo="http://openoffice.org/2004/office">
-<!-- Protocol Color Palette v1.0.0 -->
+<!-- Protocol Color Palette v2.0.0 -->
 
   <draw:color draw:name="black" draw:color="#000000" />
   <draw:color draw:name="primary" draw:color="#000000" />
@@ -17,32 +17,39 @@
   <draw:color draw:name="white" draw:color="#ffffff" />
   <draw:color draw:name="secondary" draw:color="#ffffff" />
 
-  <draw:color draw:name="cyan-light" draw:color="#00ffff" />
-  <draw:color draw:name="cyan" draw:color="#00e5e5" />
-  <draw:color draw:name="cyan-dark" draw:color="#00cccc" />
+  <draw:color draw:name="cyan-light" draw:color="#a2ffff" />
+  <draw:color draw:name="cyan" draw:color="#00ffff" />
+  <draw:color draw:name="cyan-dark" draw:color="#00e5e5" />
 
-  <draw:color draw:name="yellow-light" draw:color="#fff63a" />
-  <draw:color draw:name="yellow" draw:color="#e5dc34" />
-  <draw:color draw:name="yellow-dark" draw:color="#ccc42e" />
+  <draw:color draw:name="yellow-light" draw:color="#fff9a3" />
+  <draw:color draw:name="yellow" draw:color="#fff44f" />
+  <draw:color draw:name="yellow-dark" draw:color="#f7e800" />
 
-  <draw:color draw:name="red-light" draw:color="#ff4d4e" />
-  <draw:color draw:name="red" draw:color="#e54546" />
-  <draw:color draw:name="red-dark" draw:color="#cc3d3e" />
+  <draw:color draw:name="red-light" draw:color="#fe7c87" />
+  <draw:color draw:name="red" draw:color="#ff4f5e" />
+  <draw:color draw:name="red-dark" draw:color="#e53c4a" />
 
-  <draw:color draw:name="green-light" draw:color="#49ffbb" />
-  <draw:color draw:name="green" draw:color="#41e5a7" />
-  <draw:color draw:name="green-dark" draw:color="#3acc95" />
+  <draw:color draw:name="green-light" draw:color="#adffdf" />
+  <draw:color draw:name="green" draw:color="#54ffbd" />
+  <draw:color draw:name="green-dark" draw:color="#2ce69e" />
 
-  <draw:color draw:name="teal-light" draw:color="#00a7a7" />
-  <draw:color draw:name="teal" draw:color="#009696" />
-  <draw:color draw:name="teal-dark" draw:color="#008484" />
+  <draw:color draw:name="teal-light" draw:color="#25bcbc" />
+  <draw:color draw:name="teal" draw:color="#0f8f8f" />
+  <draw:color draw:name="teal-dark" draw:color="#005e5e" />
 
-  <draw:color draw:name="purple-light" draw:color="#cf2cfa" />
-  <draw:color draw:name="purple" draw:color="#ba27e1" />
-  <draw:color draw:name="purple-dark" draw:color="#a423c7" />
+  <draw:color draw:name="purple-light" draw:color="#9f54b2" />
+  <draw:color draw:name="purple" draw:color="#6e008b" />
+  <draw:color draw:name="purple-dark" draw:color="#4f0164" />
 
-  <draw:color draw:name="blue-light" draw:color="#00a7e0" />
-  <draw:color draw:name="blue" draw:color="#0096ca" />
-  <draw:color draw:name="blue-dark" draw:color="#0084b2" />
+  <draw:color draw:name="blue-light" draw:color="#539ee9" />
+  <draw:color draw:name="link-hover" draw:color="#539ee9" />
+  <draw:color draw:name="blue" draw:color="#2374c6" />
+  <draw:color draw:name="link" draw:color="#2374c6" />
+  <draw:color draw:name="blue-dark" draw:color="#00458b" />
+  <draw:color draw:name="link-active" draw:color="#00458b" />
+
+  <draw:color draw:name="gray-light" draw:color="#e7e7e7" />
+  <draw:color draw:name="gray" draw:color="#c8c8c8" />
+  <draw:color draw:name="gray-dark" draw:color="#959595" />
 
 </ooo:color-table>

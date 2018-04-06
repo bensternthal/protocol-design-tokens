@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* Protocol Colors CSS Variables v1.0.0 */
+/* Protocol Colors CSS Variables v2.0.0 */
 
 :root {
   --black: #000000;
@@ -11,32 +11,39 @@
   --white: #ffffff;
   --secondary: #ffffff;
 
-  --cyan-light: #00ffff;
-  --cyan: #00e5e5;
-  --cyan-dark: #00cccc;
+  --cyan-light: #a2ffff;
+  --cyan: #00ffff;
+  --cyan-dark: #00e5e5;
 
-  --yellow-light: #fff63a;
-  --yellow: #e5dc34;
-  --yellow-dark: #ccc42e;
+  --yellow-light: #fff9a3;
+  --yellow: #fff44f;
+  --yellow-dark: #f7e800;
 
-  --red-light: #ff4d4e;
-  --red: #e54546;
-  --red-dark: #cc3d3e;
+  --red-light: #fe7c87;
+  --red: #ff4f5e;
+  --red-dark: #e53c4a;
 
-  --green-light: #49ffbb;
-  --green: #41e5a7;
-  --green-dark: #3acc95;
+  --green-light: #adffdf;
+  --green: #54ffbd;
+  --green-dark: #2ce69e;
 
-  --teal-light: #00a7a7;
-  --teal: #009696;
-  --teal-dark: #008484;
+  --teal-light: #25bcbc;
+  --teal: #0f8f8f;
+  --teal-dark: #005e5e;
 
-  --purple-light: #cf2cfa;
-  --purple: #ba27e1;
-  --purple-dark: #a423c7;
+  --purple-light: #9f54b2;
+  --purple: #6e008b;
+  --purple-dark: #4f0164;
 
-  --blue-light: #00a7e0;
-  --blue: #0096ca;
-  --blue-dark: #0084b2;
+  --blue-light: #539ee9;
+  --link-hover-light: #539ee9;
+  --blue: #2374c6;
+  --link: #2374c6;
+  --blue-dark: #00458b;
+  --link-active-dark: #00458b;
+
+  --gray-light: #e7e7e7;
+  --gray: #c8c8c8;
+  --gray-dark: #959595;
 
 }
