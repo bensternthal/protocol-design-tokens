@@ -1,3 +1,9 @@
+# 2.0.2 (2018-04-07)
+
+### Features
+
+* **gradients:** add Android support for gradients
+
 # 2.0.0 (2018-04-06)
 
 ### Bug Fixes
