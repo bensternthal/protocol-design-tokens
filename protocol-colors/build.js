@@ -389,10 +389,18 @@ const formatsGradients = {
     'android': {
       'output': [`<?xml version="1.0" encoding="utf-8"?>\n\n${xmlLicense}\n\n<layer-list xmlns:android="http://schemas.android.com/apk/res/android">\n  <!-- Protocol Color Palette v${metadata.version} -->\n`],
       'formatter': (gradient, direction, degrees, values) => {
-        if (values.length === 15) {
-          return `  <item android:id="@+id/gradient_${gradient}">\n    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">\n      <gradient\n        android:angle="${degrees}"\n        android:startColor="${values.replace(/,/g , '"\n        android:endColor="')}"\n        android:type="${direction}" />\n      </gradient>\n    </shape>\n  </item>`
-        } else if (values.length === 23) {
-          return `  <item android:id="@+id/gradient_${gradient}">\n    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">\n      <gradient\n        android:angle="${degrees}"\n        android:startColor="${values.replace(/,/ , '"\n        android:centerColor="').replace(/,/ , '"\n        android:endColor="')}"\n        android:type="${direction}" />\n      </gradient>\n    </shape>\n  </item>`
+        if (direction === 'radial') {
+          if (values.length === 15) {
+            return `  <item android:id="@+id/gradient_${gradient}">\n    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">\n      <gradient\n        android:angle="${degrees}"\n        android:startColor="${values.replace(/,/g , '"\n        android:endColor="')}"\n        android:type="${direction}"\n        android:gradientRadius="100%p" />\n      </gradient>\n    </shape>\n  </item>`
+          } else if (values.length === 23) {
+            return `  <item android:id="@+id/gradient_${gradient}">\n    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">\n      <gradient\n        android:angle="${degrees}"\n        android:startColor="${values.replace(/,/ , '"\n        android:centerColor="').replace(/,/ , '"\n        android:endColor="')}"\n        android:type="${direction}"\n        android:gradientRadius="100%p" />\n      </gradient>\n    </shape>\n  </item>`
+          }
+        } else if (direction === 'linear') {
+          if (values.length === 15) {
+            return `  <item android:id="@+id/gradient_${gradient}">\n    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">\n      <gradient\n        android:angle="${degrees}"\n        android:startColor="${values.replace(/,/g , '"\n        android:endColor="')}"\n        android:type="${direction}" />\n      </gradient>\n    </shape>\n  </item>`
+          } else if (values.length === 23) {
+            return `  <item android:id="@+id/gradient_${gradient}">\n    <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">\n      <gradient\n        android:angle="${degrees}"\n        android:startColor="${values.replace(/,/ , '"\n        android:centerColor="').replace(/,/ , '"\n        android:endColor="')}"\n        android:type="${direction}" />\n      </gradient>\n    </shape>\n  </item>`
+          }
         }
       },
       'footer': '</layer-list>',
