@@ -4,7 +4,7 @@
 
 /* Protocol Colors SCSS Variables v2.0.1 */
 
-exports.GRAYSCALE = 'radial-gradient(90deg,#000000,#FFFFFF)';
+exports.GRAYSCALE = 'linear-gradient(90deg,#000000,#FFFFFF)';
 
 exports.FOCUS = 'linear-gradient(45deg,#4A1475,#671878,#C42482,#FF271D)';
 

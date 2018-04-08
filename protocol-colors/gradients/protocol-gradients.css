@@ -5,7 +5,7 @@
 /* Protocol Colors CSS Variables v2.0.1 */
 
 :root {
-  --gradient-grayscale: radial-gradient(90deg,#000000,#FFFFFF);
+  --gradient-grayscale: linear-gradient(90deg,#000000,#FFFFFF);
 
   --gradient-focus: linear-gradient(45deg,#4A1475,#671878,#C42482,#FF271D);
 
