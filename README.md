@@ -8,22 +8,6 @@ For example in CSS, design tokens are used as _variables_, though there will be 
 
 A design token file is written in [JSON](http://json.org/). For example this is a color token:
 
-```json
-{
-  "blue": {
-    "50": "#0a84ff"
-  }
-}
-```
-
-And this is its conversion into a CSS variable:
-
-```css
-:root {
-  --blue-50: #0a84ff;
-}
-```
-
 ## Contribute
 
 Setup the environment with [git](https://git-scm.com/) and [node](https://nodejs.org/en/) already installed. Then:
