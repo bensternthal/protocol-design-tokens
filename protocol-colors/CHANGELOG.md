@@ -1,3 +1,10 @@
+# 2.0.3 (2018-04-09)
+
+### Features
+
+* **gradients:** add Swift support for gradients
+
+
 # 2.0.2 (2018-04-07)
 
 ### Features

@@ -308,7 +308,7 @@ const formats = {
           }
         } else {
           if (alpha == '100') {
-              return `$color-${color}-${variant}: ${value};\n$color-${alias}: ${value};\n`;
+            return `$color-${color}-${variant}: ${value};\n$color-${alias}: ${value};\n`;
           } else {
             return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n$color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           }
@@ -322,7 +322,7 @@ const formats = {
           }
         } else {
           if (alpha == '100') {
-              return `$color-${color}-${variant}: ${value};\n`;
+            return `$color-${color}-${variant}: ${value};\n`;
           } else {
             return `$color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           }
@@ -413,6 +413,20 @@ const formatsGradients = {
       },
       'footer': '}\n',
       'ext': 'css'
+    },
+    'ios': {
+      'output': [`${jsLicense}\n/* Protocol Gradients iOS Variables v${metadata.version}\n   From ${metadata.homepage} */\n\nextension UIColor {\n`],
+      'formatter': (gradient, direction, degrees, values) => {
+        if (values.length === 15) {
+          return `  func ${gradient}Gradient() {\n    let layer : CAGradientLayer = CAGradientLayer()\n    layer.frame.size = self.frame.size\n    layer.frame.origin = CGPointZero\n    layer.cornerRadius = CGFloat(frame.width / 20)\n\n    let color0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')})\n    let color0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')})\n\n    layer.colors = [color0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')},color0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')}]\n    self.layer.insertSublayer(layer, atIndex: 0)\n  }`
+        } else if (values.length === 23) {
+          return `  func ${gradient}Gradient() {\n    let layer : CAGradientLayer = CAGradientLayer()\n    layer.frame.size = self.frame.size\n    layer.frame.origin = CGPointZero\n    layer.cornerRadius = CGFloat(frame.width / 20)\n\n    let color0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')})\n    let color0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')})\n    let color0x${values.replace(/#/g , '').slice(12, values.indexOf(',') + 12).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(12, values.indexOf(',') + 12).replace(/,/ , '')})\n\n    layer.colors = [color0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')},color0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')},color0x${values.replace(/#/g , '').slice(12, values.indexOf(',') + 12).replace(/,/ , '')}]\n    self.layer.insertSublayer(layer, atIndex: 0)\n  },`
+        } else if (values.length === 31) {
+          return `  func ${gradient}Gradient() {\n    let layer : CAGradientLayer = CAGradientLayer()\n    layer.frame.size = self.frame.size\n    layer.frame.origin = CGPointZero\n    layer.cornerRadius = CGFloat(frame.width / 20)\n\n    let color0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')})\n    let color0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')})\n    let color0x${values.replace(/#/g , '').slice(12, values.indexOf(',') + 12).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(12, values.indexOf(',') + 12).replace(/,/ , '')})\n    let color0x${values.replace(/#/g , '').slice(18, values.indexOf(',') + 18).replace(/,/ , '')} = UIColor(0x${values.replace(/#/g , '').slice(18, values.indexOf(',') + 18).replace(/,/ , '')})\n\n    layer.colors = [color0x${values.replace(/#/g , '').slice(0, values.indexOf(',')).replace(/,/ , '')},color0x${values.replace(/#/g , '').slice(6, values.indexOf(',') + 6).replace(/,/ , '')},color0x${values.replace(/#/g , '').slice(12, values.indexOf(',') + 12).replace(/,/ , '')},color0x${values.replace(/#/g , '').slice(18, values.indexOf(',') + 18).replace(/,/ , '')}]\n    self.layer.insertSublayer(layer, atIndex: 0)\n  },`
+        }
+      },
+      'footer': '}\n',
+      'ext': 'swift'
     },
     'js': {
       'output': [`${jsLicense}\n/* Protocol Colors SCSS Variables v${metadata.version} */\n\n`],
