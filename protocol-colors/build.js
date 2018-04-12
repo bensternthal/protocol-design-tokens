@@ -63,13 +63,13 @@ const formats = {
       if (alpha != '100') {
         value = '#' + toHex(alpha) + value.substr(1);
         if(typeof alias !== "undefined") {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `    <color name="${color}_a${alpha}">${value}</color>\n    <color name="${alias}_a${alpha}">${value}</color>\n`
           } else {
             return `    <color name="${color}_${variant}_a${alpha}">${value}</color>\n    <color name="${alias}_a${alpha}">${value}</color>\n`
           }
         } else {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `    <color name="${color}_a${alpha}">${value}</color>\n`
           } else {
             return `    <color name="${color}_${variant}_a${alpha}">${value}</color>\n`
@@ -77,13 +77,13 @@ const formats = {
         }
       } else {
         if(typeof alias !== "undefined") {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `    <color name="${color}">${value}</color>\n    <color name="${alias}">${value}</color>\n`
           } else {
             return `    <color name="${color}_${variant}">${value}</color>\n    <color name="${alias}">${value}</color>\n`
           }
         } else {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `    <color name="${color}">${value}</color>\n`
           } else {
             return `    <color name="${color}_${variant}">${value}</color>\n`
@@ -99,14 +99,14 @@ const formats = {
     'formatter': (color, variant, value, alpha, alias) => {
       if(typeof alias !== "undefined") {
         if (alpha == '100') {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `  --${color}: ${value};\n  --${alias}: ${value};\n`;
           } else {
             return `  --${color}-${variant}: ${value};\n  --${alias}-${variant}: ${value};\n`;
           }
         } else {
           const {r,g,b} = getRgb(value);
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `  --${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n  --${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           } else {
             return `  --${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n  --${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
@@ -114,14 +114,14 @@ const formats = {
         }
       } else {
         if (alpha == '100') {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `  --${color}: ${value};\n`;
           } else {
             return `  --${color}-${variant}: ${value};\n`;
           }
         } else {
           const {r,g,b} = getRgb(value);
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `  --${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           } else {
             return `  --${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
@@ -141,13 +141,13 @@ const formats = {
         const {r,g,b} = getRgb(value);
         if(typeof alias !== "undefined") {
           alias = alias.charAt(0).toUpperCase() + alias.slice(1);
-          if (variant == 'Default') {
+          if (variant == 'Base') {
             return `${r} ${g} ${b} ${color}\n${r} ${g} ${b} ${alias}\n`;
           } else {
             return `${r} ${g} ${b} ${color} ${variant}\n${r} ${g} ${b} ${alias}\n`;
           }
         } else {
-          if (variant == 'Default') {
+          if (variant == 'Base') {
             return `${r} ${g} ${b} ${color}\n`;
           } else {
             return `${r} ${g} ${b} ${color} ${variant}\n`;
@@ -165,13 +165,13 @@ const formats = {
         value = `rgba: 0x${value.substr(1) + toHex(alpha)}`;
         if(typeof alias !== "undefined") {
           alias = alias[0].toUpperCase() + alias.substr(1);
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `        static let ${color}A${alpha} = UIColor(${value})\n        static let ${alias}A${alpha} = UIColor(${value})\n`;
           } else {
             return `        static let ${color}${variant}A${alpha} = UIColor(${value})\n        static let ${alias}A${alpha} = UIColor(${value})\n`;
           }
         } else {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `        static let ${color}A${alpha} = UIColor(${value})\n`;
           } else {
             return `        static let ${color}${variant}A${alpha} = UIColor(${value})\n`;
@@ -181,13 +181,13 @@ const formats = {
         value = `rgb: 0x${value.substr(1)}`;
         if(typeof alias !== "undefined") {
           alias = alias[0].toUpperCase() + alias.substr(1);
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `        static let ${color} = UIColor(${value})\n        static let ${alias} = UIColor(${value})\n`;
           } else {
             return `        static let ${color}${variant} = UIColor(${value})\n        static let ${alias} = UIColor(${value})\n`;
           }
         } else {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `        static let ${color} = UIColor(${value})\n`;
           } else {
             return `        static let ${color}${variant} = UIColor(${value})\n`;
@@ -204,13 +204,13 @@ const formats = {
       if (alpha != '100') {
         value = value + toHex(alpha);
         if(typeof alias !== "undefined") {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `exports.${color.toUpperCase()}_A${alpha} = '${value}';\nexports.${alias.toUpperCase()}_A${alpha} = '${value}';\n`;
           } else {
             return `exports.${color.toUpperCase()}_${variant.toUpperCase()}_A${alpha} = '${value}';\nexports.${alias.toUpperCase()}_A${alpha} = '${value}';\n`;
           }
         } else {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `exports.${color.toUpperCase()}_A${alpha} = '${value}';\n`;
           } else {
             return `exports.${color.toUpperCase()}_${variant.toUpperCase()}_A${alpha} = '${value}';\n`;
@@ -218,13 +218,13 @@ const formats = {
         }
       } else {
         if(typeof alias !== "undefined") {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `exports.${color.toUpperCase()} = '${value}';\nexports.${alias.toUpperCase()} = '${value}';\n`;
           } else {
             return `exports.${color.toUpperCase()}_${variant.toUpperCase()} = '${value}';\nexports.${alias.toUpperCase()} = '${value}';\n`;
           }
         } else {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `exports.${color.toUpperCase()} = '${value}';\n`;
           } else {
             return `exports.${color.toUpperCase()}_${variant.toUpperCase()} = '${value}';\n`;
@@ -239,14 +239,14 @@ const formats = {
     'formatter': (color, variant, value, alpha, alias) => {
       if(typeof alias !== "undefined") {
         if (alpha == '100') {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `@color-${color}: ${value};\n@color-${alias}: ${value};\n`;
           } else {
             return `@color-${color}-${variant}: ${value};\n@color-${color}-${variant}: ${value};\n`;
           }
         } else {
           const {r,g,b} = getRgb(value);
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `@color-${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n@color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           } else {
             return `@color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n@color-${alias}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
@@ -254,14 +254,14 @@ const formats = {
         }
       } else {
         if (alpha == '100') {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `@color-${color}: ${value};\n`;
           } else {
             return `@color-${color}-${variant}: ${value};\n`;
           }
         } else {
           const {r,g,b} = getRgb(value);
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `@color-${color}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
           } else {
             return `@color-${color}-${variant}-a${alpha}: rgba(${r}, ${g}, ${b}, ${alpha/100});\n`;
@@ -276,7 +276,7 @@ const formats = {
     'formatter': (color, variant, value, alpha, alias) => {
       if(typeof alias !== "undefined") {
         if (alpha == '100') {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `  <draw:color draw:name="${color}" draw:color="${value}" />\n  <draw:color draw:name="${alias}" draw:color="${value}" />\n`;
           } else {
             return `  <draw:color draw:name="${color}-${variant}" draw:color="${value}" />\n  <draw:color draw:name="${alias}" draw:color="${value}" />\n`;
@@ -284,7 +284,7 @@ const formats = {
         }
       } else {
         if (alpha == '100') {
-          if (variant == 'default') {
+          if (variant == 'base') {
             return `  <draw:color draw:name="${color}" draw:color="${value}" />\n`;
           } else {
             return `  <draw:color draw:name="${color}-${variant}" draw:color="${value}" />\n`;
@@ -300,7 +300,7 @@ const formats = {
     'formatter': (color, variant, value, alpha, alias) => {
       const {r,g,b} = getRgb(value);
       if(typeof alias !== "undefined") {
-        if (variant == 'default') {
+        if (variant == 'base') {
           if (alpha == '100') {
             return `$color-${color}: ${value};\n$color-${alias}: ${value};\n`;
           } else {
@@ -314,7 +314,7 @@ const formats = {
           }
         }
       } else {
-        if (variant == 'default') {
+        if (variant == 'base') {
           if (alpha == '100') {
             return `$color-${color}: ${value};\n`;
           } else {

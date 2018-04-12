@@ -1,0 +1,9 @@
+$screen-lg : 120rem !default;
+$screen-md : 90rem !default;
+$screen-sm : 64rem !default;
+$screen-xs : 40rem !default;
+
+$screen-xl-min : $screen-lg + rem(1px) !default;
+$screen-lg-min : $screen-md + rem(1px) !default;
+$screen-md-min : $screen-sm + rem(1px) !default;
+$screen-sm-min : $screen-xs + rem(1px) !default;
