@@ -41,7 +41,6 @@ function createUnits(property, format) {
     rv.push(format.formatter(property, size, value));
   }
 
-
   if (format.group_end === undefined) {
     format.group_end = '\n';
   }
@@ -64,7 +63,7 @@ const formatsUnits = {
       'ext': 'scss'
     },
     'less': {
-      'output': [`${jsLicense}\n/* Protocol Units SCSS Variables v${metadata.version} */\n\n`],
+      'output': [`${jsLicense}\n/* Protocol Colors Less Variables v${metadata.version} */\n\n`],
       'formatter': (property, size, value) => {
         if (isNaN(value)) {
           return `@${property}-${size}: @${value};\n`
@@ -73,6 +72,18 @@ const formatsUnits = {
         }
       },
       'ext': 'less'
+    },
+    'css': {
+      'output': [`${jsLicense}\n/* Protocol Colors CSS Variables v${metadata.version} */\n\n:root {\n`],
+      'formatter': (property, size, value) => {
+        if (isNaN(value)) {
+          return `  --${property}-${size}: var(--${value});\n`
+        } else {
+          return `  --${property}-${size}: ${value}px;\n`
+        }
+      },
+      'footer': '}\n',
+      'ext': 'css'
     }
 }
 
