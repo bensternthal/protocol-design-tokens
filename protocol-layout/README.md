@@ -12,7 +12,7 @@ Install package with NPM and add it to your development dependencies:
 
 <table>
 <tr>
-<td>Package</td><td>protocol-colors</td>
+<td>Package</td><td>protocol-layout</td>
 </tr>
 <tr>
 <td>Description</td>
