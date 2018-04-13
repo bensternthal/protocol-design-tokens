@@ -1,6 +1,6 @@
 {
   "name": "protocol-layout",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Variables for Mozilla's layout units and settings",
   "scripts": {
     "build": "node build.js"

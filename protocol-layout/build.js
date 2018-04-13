@@ -51,16 +51,28 @@ function createUnits(property, format) {
 }
 
 const formatsUnits = {
-    'sass': {
-      'output': [`${jsLicense}\n/* Protocol Units SCSS Variables v${metadata.version} */\n\n`],
+    'css': {
+      'output': [`${jsLicense}\n/* Protocol Colors CSS Variables v${metadata.version} */\n\n:root {\n`],
       'formatter': (property, size, value) => {
         if (isNaN(value)) {
-          return `$${property}-${size}: $${value};\n`
+          return `  --${property}-${size}: var(--${value});\n`
         } else {
-          return `$${property}-${size}: ${value}px;\n`
+          return `  --${property}-${size}: ${value}px;\n`
         }
       },
-      'ext': 'scss'
+      'footer': '}\n',
+      'ext': 'css'
+    },
+    'js': {
+      'output': [`${jsLicense}\n/* Protocol Colors JS Variables v${metadata.version} */\n\n`],
+      'formatter': (property, size, value) => {
+        if (isNaN(value)) {
+          return //`exports.${property.toUpperCase()}_${size.toUpperCase()}: @${value};\n`
+        } else {
+          return `exports.${property.toUpperCase()}_${size.toUpperCase()}: "${value}px"\n`
+        }
+      },
+      'ext': 'js'
     },
     'less': {
       'output': [`${jsLicense}\n/* Protocol Colors Less Variables v${metadata.version} */\n\n`],
@@ -73,17 +85,16 @@ const formatsUnits = {
       },
       'ext': 'less'
     },
-    'css': {
-      'output': [`${jsLicense}\n/* Protocol Colors CSS Variables v${metadata.version} */\n\n:root {\n`],
+    'sass': {
+      'output': [`${jsLicense}\n/* Protocol Units SCSS Variables v${metadata.version} */\n\n`],
       'formatter': (property, size, value) => {
         if (isNaN(value)) {
-          return `  --${property}-${size}: var(--${value});\n`
+          return `$${property}-${size}: $${value};\n`
         } else {
-          return `  --${property}-${size}: ${value}px;\n`
+          return `$${property}-${size}: ${value}px;\n`
         }
       },
-      'footer': '}\n',
-      'ext': 'css'
+      'ext': 'scss'
     }
 }
 
