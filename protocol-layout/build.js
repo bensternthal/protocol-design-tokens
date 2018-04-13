@@ -23,55 +23,20 @@ function createUnits(property, format) {
   for (const size in units[property]) {
     if (size === "xxs") {
       var value = `${units[property].xxs}`
-      if (isNaN(value)) {
-        var value = `$${units[property].xxs}`
-      } else {
-        var value = `${units[property].xxs}px`
-      }
     } else if (size === "xs") {
       var value = `${units[property].xs}`
-      if (isNaN(value)) {
-        var value = `$${units[property].xs}`
-      } else {
-        var value = `${units[property].xs}px`
-      }
     } else if (size === "sm") {
       var value = `${units[property].sm}`
-      if (isNaN(value)) {
-        var value = `$${units[property].sm}`
-      } else {
-        var value = `${units[property].sm}px`
-      }
     } else if (size === "md") {
       var value = `${units[property].md}`
-      if (isNaN(value)) {
-        var value = `$${units[property].md}`
-      } else {
-        var value = `${units[property].md}px`
-      }
     } else if (size === "lg") {
       var value = `${units[property].lg}`
-      if (isNaN(value)) {
-        var value = `$${units[property].lg}`
-      } else {
-        var value = `${units[property].lg}px`
-      }
     } else if (size === "xl") {
       var value = `${units[property].xl}`
-      if (isNaN(value)) {
-        var value = `$${units[property].xl}`
-      } else {
-        var value = `${units[property].xl}px`
-      }
     } else if (size === "xxl") {
       var value = `${units[property].xxl}`
-      if (isNaN(value)) {
-        var value = `$${units[property].xxl}`
-      } else {
-        var value = `${units[property].xxl}px`
-      }
     } else {
-      var value = `$${units[property].base}`
+      var value = `${units[property].base}`
     }
     rv.push(format.formatter(property, size, value));
   }
@@ -90,9 +55,24 @@ const formatsUnits = {
     'sass': {
       'output': [`${jsLicense}\n/* Protocol Units SCSS Variables v${metadata.version} */\n\n`],
       'formatter': (property, size, value) => {
-        return `$${property}-${size}: ${value};\n`
+        if (isNaN(value)) {
+          return `$${property}-${size}: $${value};\n`
+        } else {
+          return `$${property}-${size}: ${value}px;\n`
+        }
       },
       'ext': 'scss'
+    },
+    'less': {
+      'output': [`${jsLicense}\n/* Protocol Units SCSS Variables v${metadata.version} */\n\n`],
+      'formatter': (property, size, value) => {
+        if (isNaN(value)) {
+          return `@${property}-${size}: @${value};\n`
+        } else {
+          return `@${property}-${size}: ${value}px;\n`
+        }
+      },
+      'ext': 'less'
     }
 }
 
