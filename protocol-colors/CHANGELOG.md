@@ -1,3 +1,10 @@
+# 2.0.4 (2018-04-13)
+
+### Features
+
+* **colors:** fixed JS bug by replacing dashes with underscores
+
+
 # 2.0.3 (2018-04-09)
 
 ### Features
@@ -15,7 +22,7 @@
 
 ### Bug Fixes
 
-* **opacity:** opacity wasn't being exported to the SCSS file
+* **colors:** opacity wasn't being exported to the SCSS file
 
 ### Features
 

@@ -205,9 +205,9 @@ const formats = {
         value = value + toHex(alpha);
         if(typeof alias !== "undefined") {
           if (variant == 'base') {
-            return `exports.${color.toUpperCase()}_A${alpha} = '${value}';\nexports.${alias.toUpperCase()}_A${alpha} = '${value}';\n`;
+            return `exports.${color.toUpperCase()}_A${alpha} = '${value}';\nexports.${alias.toUpperCase().replace("-", "_")}_A${alpha} = '${value}';\n`;
           } else {
-            return `exports.${color.toUpperCase()}_${variant.toUpperCase()}_A${alpha} = '${value}';\nexports.${alias.toUpperCase()}_A${alpha} = '${value}';\n`;
+            return `exports.${color.toUpperCase()}_${variant.toUpperCase()}_A${alpha} = '${value}';\nexports.${alias.toUpperCase().replace("-", "_")}_A${alpha} = '${value}';\n`;
           }
         } else {
           if (variant == 'base') {
@@ -219,9 +219,9 @@ const formats = {
       } else {
         if(typeof alias !== "undefined") {
           if (variant == 'base') {
-            return `exports.${color.toUpperCase()} = '${value}';\nexports.${alias.toUpperCase()} = '${value}';\n`;
+            return `exports.${color.toUpperCase()} = '${value}';\nexports.${alias.toUpperCase().replace("-", "_")} = '${value}';\n`;
           } else {
-            return `exports.${color.toUpperCase()}_${variant.toUpperCase()} = '${value}';\nexports.${alias.toUpperCase()} = '${value}';\n`;
+            return `exports.${color.toUpperCase()}_${variant.toUpperCase()} = '${value}';\nexports.${alias.toUpperCase().replace("-", "_")} = '${value}';\n`;
           }
         } else {
           if (variant == 'base') {
