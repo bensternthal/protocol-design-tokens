@@ -7,7 +7,7 @@
   },
   "white": {
     "base": {
-      "hex": "#ffffff",
+      "hex": "#0000FF",
       "map": "secondary"
     }
   },
