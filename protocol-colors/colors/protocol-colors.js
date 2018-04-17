@@ -44,4 +44,3 @@ exports.LINK_ACTIVE = '#00458b';
 exports.GRAY_LIGHT = '#e7e7e7';
 exports.GRAY = '#c8c8c8';
 exports.GRAY_DARK = '#959595';
-
