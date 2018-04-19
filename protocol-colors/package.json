@@ -1,8 +1,8 @@
 {
-  "name": "protocol-colors",
+  "name": "@mozilla-protocol/colors",
   "version": "2.0.4",
   "description": "Variables for Mozilla's brand and interface color palette",
-  "main": "protocol-colors.js",
+  "main": "colors/protocol-colors.js",
   "style": "protocol-colors.scss",
   "scripts": {
     "build": "node build.js"
