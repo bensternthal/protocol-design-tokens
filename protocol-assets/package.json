@@ -1,5 +1,5 @@
 {
-  "name": "@mozilla/protocol-assets",
+  "name": "@mozilla-protocol/assets",
   "version": "0.0.1",
   "description": "Variables for Mozilla's brand and interface color palette",
   "main": "icons/protocol-icons.scss",
