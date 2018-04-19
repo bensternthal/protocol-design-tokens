@@ -1,6 +1,6 @@
 {
   "name": "@mozilla-protocol/layout",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Variables for Mozilla's layout units and settings",
   "main": "protocol-layout.js",
   "style": "protocol-layout.scss",
