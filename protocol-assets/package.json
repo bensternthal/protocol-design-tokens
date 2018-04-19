@@ -1,9 +1,9 @@
 {
-  "name": "protocol-assets",
+  "name": "@mozilla/protocol-assets",
   "version": "0.0.1",
   "description": "Variables for Mozilla's brand and interface color palette",
-  "main": "protocol-icons.js",
-  "style": "protocol-icons.scss",
+  "main": "icons/protocol-icons.scss",
+  "style": "icons/protocol-icons.scss",
   "scripts": {
     "build": "node build.js"
   },
