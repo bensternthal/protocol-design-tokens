@@ -36,12 +36,15 @@
   --purple-dark: #4f0164;
 
   --blue-light: #539ee9;
-  --link-hover-light: #539ee9;
   --blue: #2374c6;
-  --link: #2374c6;
   --blue-dark: #00458b;
-  --link-active-dark: #00458b;
 
+  --link: #0060df;
+  --link-hover: #003eaa;
+  --link-visited: #8000d7;
+  --link-visited-hover: #6200a4;
+
+  --gray-lighter: #f5f5f5;
   --gray-light: #e7e7e7;
   --gray: #c8c8c8;
   --gray-dark: #959595;
