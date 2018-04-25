@@ -12,50 +12,48 @@
     }
   },
   "cyan": {
-    "light":  {"hex": "#a2ffff"},
+    "light": {"hex": "#a2ffff"},
     "base": {"hex": "#00ffff"},
-    "dark":   {"hex": "#00e5e5"}
+    "dark": {"hex": "#00e5e5"}
   },
   "yellow": {
-    "light":  {"hex": "#fff9a3"},
+    "light": {"hex": "#fff9a3"},
     "base": {"hex": "#fff44f"},
-    "dark":   {"hex": "#f7e800"}
+    "dark": {"hex": "#f7e800"}
   },
   "red": {
-    "light":  {"hex": "#fe7c87"},
+    "light": {"hex": "#fe7c87"},
     "base": {"hex": "#ff4f5e"},
-    "dark":   {"hex": "#e53c4a"}
+    "dark": {"hex": "#e53c4a"}
   },
   "green": {
-    "light":  {"hex": "#adffdf"},
+    "light": {"hex": "#adffdf"},
     "base": {"hex": "#54ffbd"},
-    "dark":   {"hex": "#2ce69e"}
+    "dark": {"hex": "#2ce69e"}
   },
   "teal": {
-    "light":  {"hex": "#25bcbc"},
+    "light": {"hex": "#25bcbc"},
     "base": {"hex": "#0f8f8f"},
-    "dark":   {"hex": "#005e5e"}
+    "dark": {"hex": "#005e5e"}
   },
   "purple": {
-    "light":  {"hex": "#9f54b2"},
+    "light": {"hex": "#9f54b2"},
     "base": {"hex": "#6e008b"},
-    "dark":   {"hex": "#4f0164"}
+    "dark": {"hex": "#4f0164"}
   },
   "blue": {
-    "light":  {
-      "hex": "#539ee9",
-      "map": "link-hover"
-    },
-    "base": {
-      "hex": "#2374c6",
-      "map": "link"
-    },
-    "dark":   {
-      "hex": "#00458b",
-      "map": "link-active"
-    }
+    "light": {"hex": "#539ee9"},
+    "base": {"hex": "#2374c6"},
+    "dark": {"hex": "#00458b"}
+  },
+  "link": {
+    "base": {"hex": "#0060df"},
+    "hover": {"hex": "#003eaa"},
+    "visited": {"hex": "#8000d7"},
+    "visited-hover": {"hex": "#6200a4"}
   },
   "gray": {
+    "lighter": {"hex": "#f5f5f5"},
     "light":  {"hex": "#e7e7e7"},
     "base": {"hex": "#c8c8c8"},
     "dark":   {"hex": "#959595"}

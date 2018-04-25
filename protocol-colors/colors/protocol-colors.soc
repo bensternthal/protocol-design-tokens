@@ -42,12 +42,15 @@
   <draw:color draw:name="purple-dark" draw:color="#4f0164" />
 
   <draw:color draw:name="blue-light" draw:color="#539ee9" />
-  <draw:color draw:name="link-hover" draw:color="#539ee9" />
   <draw:color draw:name="blue" draw:color="#2374c6" />
-  <draw:color draw:name="link" draw:color="#2374c6" />
   <draw:color draw:name="blue-dark" draw:color="#00458b" />
-  <draw:color draw:name="link-active" draw:color="#00458b" />
 
+  <draw:color draw:name="link" draw:color="#0060df" />
+  <draw:color draw:name="link-hover" draw:color="#003eaa" />
+  <draw:color draw:name="link-visited" draw:color="#8000d7" />
+  <draw:color draw:name="link-visited-hover" draw:color="#6200a4" />
+
+  <draw:color draw:name="gray-lighter" draw:color="#f5f5f5" />
   <draw:color draw:name="gray-light" draw:color="#e7e7e7" />
   <draw:color draw:name="gray" draw:color="#c8c8c8" />
   <draw:color draw:name="gray-dark" draw:color="#959595" />

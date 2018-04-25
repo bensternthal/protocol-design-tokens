@@ -38,12 +38,15 @@ Name: Protocol Colors
 79 1 100 Purple Dark
 
 83 158 233 Blue Light
-83 158 233 Link-hover
 35 116 198 Blue
-35 116 198 Link
 0 69 139 Blue Dark
-0 69 139 Link-active
 
+0 96 223 Link
+0 62 170 Link Hover
+128 0 215 Link Visited
+98 0 164 Link Visited-hover
+
+245 245 245 Gray Lighter
 231 231 231 Gray Light
 200 200 200 Gray
 149 149 149 Gray Dark

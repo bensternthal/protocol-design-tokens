@@ -35,12 +35,16 @@ exports.PURPLE = '#6e008b';
 exports.PURPLE_DARK = '#4f0164';
 
 exports.BLUE_LIGHT = '#539ee9';
-exports.LINK_HOVER = '#539ee9';
 exports.BLUE = '#2374c6';
-exports.LINK = '#2374c6';
 exports.BLUE_DARK = '#00458b';
-exports.LINK_ACTIVE = '#00458b';
 
+exports.LINK = '#0060df';
+exports.LINK_HOVER = '#003eaa';
+exports.LINK_VISITED = '#8000d7';
+exports.LINK_VISITED-HOVER = '#6200a4';
+
+exports.GRAY_LIGHTER = '#f5f5f5';
 exports.GRAY_LIGHT = '#e7e7e7';
 exports.GRAY = '#c8c8c8';
 exports.GRAY_DARK = '#959595';
+

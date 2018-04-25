@@ -38,12 +38,15 @@ extension UIColor {
         static let Purpledark = UIColor(rgb: 0x4f0164)
 
         static let Bluelight = UIColor(rgb: 0x539ee9)
-        static let Link-hover = UIColor(rgb: 0x539ee9)
         static let Blue = UIColor(rgb: 0x2374c6)
-        static let Link = UIColor(rgb: 0x2374c6)
         static let Bluedark = UIColor(rgb: 0x00458b)
-        static let Link-active = UIColor(rgb: 0x00458b)
 
+        static let Link = UIColor(rgb: 0x0060df)
+        static let Linkhover = UIColor(rgb: 0x003eaa)
+        static let Linkvisited = UIColor(rgb: 0x8000d7)
+        static let Linkvisited-hover = UIColor(rgb: 0x6200a4)
+
+        static let Graylighter = UIColor(rgb: 0xf5f5f5)
         static let Graylight = UIColor(rgb: 0xe7e7e7)
         static let Gray = UIColor(rgb: 0xc8c8c8)
         static let Graydark = UIColor(rgb: 0x959595)
