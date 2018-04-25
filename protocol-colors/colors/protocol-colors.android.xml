@@ -5,7 +5,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <resources>
-    <!-- Protocol Color Palette v2.0.4 -->
+    <!-- Protocol Color Palette v2.1.0 -->
     <color name="black">#000000</color>
     <color name="primary">#000000</color>
 

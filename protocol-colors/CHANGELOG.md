@@ -1,3 +1,10 @@
+# 2.1.0 (2018-04-25)
+
+### Features
+
+* **colors:** Added colors for gray-lighter, link-visited, and link-visited-hover
+* **colors:** Removed link-active color
+
 # 2.0.4 (2018-04-13)
 
 ### Features
