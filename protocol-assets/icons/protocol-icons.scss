@@ -37,7 +37,7 @@ $imagedir:'/icons/lib/';
     display: block;
     height: $height;
     position: absolute;
-    top: 0px;
+    top: 0;
     width: $side-width;
     z-index: -1;
   }
@@ -81,7 +81,7 @@ $imagedir:'/icons/lib/';
     display: block;
     height: $height;
     position: absolute;
-    top: 0px;
+    top: 0;
     width: $side-width;
     z-index: -1;
   }
